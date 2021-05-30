@@ -7,17 +7,11 @@ from discord_slash import SlashCommand  # Importing the newly installed library.
 client = commands.Bot(intents=discord.Intents.all(), command_prefix="~#>")
 slash = SlashCommand(client, sync_commands=True)  # Declares slash commands through the client.
 
-
 @client.event
 async def on_ready():
+    print("Roboris is ready !")
     for guild in client.guilds:
         print(f'Connected to {guild.name} (id: {guild.id})')
-
-
-@client.event
-async def on_ready():
-    print("Roboris est prêt !")
-
 
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
