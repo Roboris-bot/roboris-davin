@@ -29,7 +29,7 @@ class Administration(commands.Cog):
             return
 
         await ctx.channel.purge(limit=int(nombre))
-        await ctx.send(content=f"J'ai bien supprimé {nombre} messages", hidden=True)
+        await ctx.send(content=f"J'ai bien supprimé {nombre} message·s", hidden=True)
 
 
 def setup(client):

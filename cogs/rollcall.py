@@ -29,8 +29,8 @@ def stringify(role, ctx):
     elif len(string_absent) < 2048:
         return string_absent, absents
     else:
-        return f"Il y à trop d'absents dans ce groupe pour que je puisse les afficher" \
-               f"({absents} absents sur {presents} personnes)\n " \
+        return f"Il y a trop d'absents dans ce groupe pour que je puisse les afficher" \
+               f" ({absents} absents sur {presents} personnes)\n " \
                f"Vérifiez que vous avez séléctioné le bon rôle à appeler!", absents
 
 
