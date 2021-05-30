@@ -10,6 +10,12 @@ slash = SlashCommand(client, sync_commands=True)  # Declares slash commands thro
 
 @client.event
 async def on_ready():
+    for guild in client.guilds:
+        print(f'Connected to {guild.name} (id: {guild.id})')
+
+
+@client.event
+async def on_ready():
     print("Roboris est prêt !")
 
 
