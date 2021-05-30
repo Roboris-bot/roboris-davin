@@ -30,7 +30,7 @@ def stringify(role, ctx):
         return string_absent, absents
     else:
         return f"Il y a trop d'absents dans ce groupe pour que je puisse les afficher" \
-               f" ({absents} absents sur {presents} personnes)\n " \
+               f" ({absents} absents sur {presents+absents} personnes)\n " \
                f"Vérifiez que vous avez séléctioné le bon rôle à appeler!", absents
 
 
