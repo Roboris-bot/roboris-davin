@@ -28,7 +28,7 @@ class Administration(commands.Cog):
         if not await admin(ctx):
             return
 
-        await ctx.defer() # We have to defer the request or it will fail before we had the time to delete all of the
+        await ctx.defer(hidden=True)  # We have to defer the request or it will fail before we had the time to delete all of the
         # messages
         await ctx.channel.purge(limit=int(nombre))
         await ctx.send(content=f"J'ai bien supprimé {nombre} message·s", hidden=True)
